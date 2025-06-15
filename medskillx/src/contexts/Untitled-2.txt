@@ -1,0 +1,111 @@
+// src/contexts/AuthContext.js
+import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
+
+// Define your backend API base URL
+const API_BASE_URL = 'http://localhost:5000/api';
+
+/**
+ * API call to simulate user login.
+ * @param {string} username - User's username or email.
+ * @param {string} password - User's password.
+ * @returns {Promise<{success: boolean, message: string, user?: object}>}
+ */
+const loginApi = async (username, password) => {
+  const response = await fetch(`${API_BASE_URL}/auth/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password }),
+  });
+  const data = await response.json();
+  return data;
+};
+
+/**
+ * NEW: API call to register a new user.
+ * @param {string} username
+ * @param {string} email
+ * @param {string} password
+ * @returns {Promise<{success: boolean, message: string, user?: object}>}
+ */
+const registerApi = async (username, email, password) => {
+  const response = await fetch(`${API_BASE_URL}/auth/register`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, email, password }),
+  });
+  const data = await response.json();
+  return data;
+};
+
+
+// --- AUTH CONTEXT ---
+// Provides authentication status and user data globally
+export const AuthContext = createContext(null); // Export AuthContext
+
+export const AuthProvider = ({ children }) => { // Export AuthProvider
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loggedInUser, setLoggedInUser] = useState(null); // Stores user object { id, username, email, profileImage, ... }
+  const [authLoading, setAuthLoading] = useState(true); // New state for initial auth check
+
+  // Check for stored login on component mount
+  useEffect(() => {
+    const storedUser = localStorage.getItem('medskillx_user');
+    if (storedUser) {
+      try {
+        const user = JSON.parse(storedUser);
+        setIsLoggedIn(true);
+        setLoggedInUser(user);
+      } catch (e) {
+        console.error("Failed to parse stored user data:", e);
+        localStorage.removeItem('medskillx_user'); // Clear corrupted data
+      }
+    }
+    setAuthLoading(false); // Authentication check is complete
+  }, []);
+
+  // Login function updates state and stores user data
+  const login = useCallback((user) => {
+    setIsLoggedIn(true);
+    setLoggedInUser(user);
+    localStorage.setItem('medskillx_user', JSON.stringify(user));
+  }, []);
+
+  // Logout function clears state and local storage
+  const logout = useCallback(() => {
+    setIsLoggedIn(false);
+    setLoggedInUser(null);
+    localStorage.removeItem('medskillx_user');
+  }, []);
+
+  // Provide the login/register API functions through the context
+  const loginUser = useCallback(async (username, password) => {
+    const response = await loginApi(username, password);
+    if (response.success) {
+      login(response.user);
+    }
+    return response;
+  }, [login]);
+
+  const registerUser = useCallback(async (username, email, password) => {
+    const response = await registerApi(username, email, password);
+    if (response.success) {
+      login(response.user); // Auto-login after successful registration
+    }
+    return response;
+  }, [login]);
+
+  return (
+    <AuthContext.Provider value={{ isLoggedIn, loggedInUser, login: loginUser, logout, register: registerUser, authLoading }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+// Custom hook for convenience
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};

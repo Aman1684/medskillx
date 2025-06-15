@@ -1,0 +1,422 @@
+[
+  {
+    "id": "user1",
+    "username": "medskillxuser",
+    "email": "user@medskillx.com",
+    "password": "password123",
+    "profileImage": "https://placehold.co/100x100/0077b6/ffffff?text=U1",
+    "trainxProgress": {},
+    "assessxScores": {},
+    "hirexApplications": []
+  },
+  {
+    "id": "user2",
+    "username": "testuser",
+    "email": "test@example.com",
+    "password": "test",
+    "profileImage": "https://placehold.co/100x100/00b4d8/ffffff?text=U2",
+    "trainxProgress": {},
+    "assessxScores": {
+      "basicAnatomy": 85,
+      "firstAid": 92
+    },
+    "hirexApplications": [
+      "jobA",
+      "jobB"
+    ]
+  },
+  {
+    "id": "83730901-807d-47d8-9c2f-2efe7e9c790c",
+    "username": "aman",
+    "email": "aman@gmail.com",
+    "password": "aman1234",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {
+      "Basic Hygiene Practices": {
+        "Hand Hygiene": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 119
+        },
+        "Surface Disinfection": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 120
+        }
+      },
+      "Patient Communication Essentials": {
+        "Active Listening": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 224
+        }
+      },
+      "Mental Health Awareness for Healthcare Workers": {
+        "Stress Management": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 180
+        },
+        "Dealing with Grief": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 240
+        }
+      },
+      "Infection Control Basics": {
+        "Personal Protective Equipment (PPE)": {
+          "completed": false,
+          "passed": false,
+          "timeLeft": 300
+        },
+        "Standard Precautions": {
+          "completed": false,
+          "passed": false,
+          "timeLeft": 240
+        }
+      }
+    },
+    "assessxScores": {
+      "4e617aec-a2ca-4747-887f-9f4bb49450d1": {
+        "totalScore": 1,
+        "totalQuestions": 2,
+        "categoryBreakdown": {
+          "Anatomy": 1
+        },
+        "dateCompleted": "2025-06-07T08:30:13.426Z"
+      }
+    },
+    "hirexApplications": [],
+    "attemptsLeft": 1,
+    "freeAttemptUsed": true,
+    "hasAccessedAssessXBefore": false
+  },
+  {
+    "id": "10df23ac-3797-44b3-9a55-d6c8769e033a",
+    "username": "aman1",
+    "email": "aman1@gmail.com",
+    "password": "aman123",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {},
+    "assessxScores": {},
+    "hirexApplications": []
+  },
+  {
+    "id": "aa522cc8-bd22-484f-a130-b17bd7d2d3cd",
+    "username": "aman123",
+    "email": "aman123@gmail.com",
+    "password": "$2b$10$RhS09XOIuN8h4nki6GSY9eGbIR87ASc/ClN6M2aOEtqbkkUMLQVsS",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {
+      "Basic Hygiene Practices": {
+        "Hand Hygiene": {
+          "completed": false,
+          "passed": false,
+          "timeLeft": 0
+        },
+        "Surface Disinfection": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 120
+        }
+      }
+    },
+    "assessxScores": {},
+    "hirexApplications": [],
+    "attemptsLeft": 2,
+    "freeAttemptUsed": true,
+    "hasAccessedAssessXBefore": false,
+    "role": "recruiter",
+    "jobPostings": [
+      "cd6eb43b-2e14-438f-b1ba-a0ff079b5452",
+      "b771796b-003f-41a9-8fe4-b00c5ef53330",
+      "78d0331e-16c4-46be-963d-c49d5fa3ae74",
+      "96b1c0eb-4f3f-40ef-9e18-b78ef9bdac06",
+      "2e38b58e-ae1c-40da-a0dc-d9b778c6da1e"
+    ]
+  },
+  {
+    "id": "2ca46cea-a6f7-4db2-9b09-15ee9624da7c",
+    "username": "aman12",
+    "email": "aman12@gmail.com",
+    "password": "$2b$10$SOD40G4cwSzlN5wNZaI8EuDI3DZRH3Q8C7zN3WOgLLwkba6gpgmUu",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {},
+    "assessxScores": {
+      "8b76cc0a-dbf6-438e-990f-5feaf4946f89": {
+        "totalScore": 20,
+        "totalQuestions": 10,
+        "categoryBreakdown": {
+          "Medical Terms": 2
+        },
+        "dateCompleted": "2025-06-08T15:28:45.177Z"
+      },
+      "653cc980-d261-4057-9582-1402ec576c7f": {
+        "totalScore": 10,
+        "totalQuestions": 10,
+        "categoryBreakdown": {
+          "Medical Terms": 1
+        },
+        "dateCompleted": "2025-06-08T15:33:13.176Z"
+      }
+    },
+    "hirexApplications": [],
+    "attemptsLeft": 0,
+    "freeAttemptUsed": true,
+    "hasAccessedAssessXBefore": true
+  },
+  {
+    "id": "ad3f8a52-56c7-4d8a-bf14-237690dda12d",
+    "username": "aman1234",
+    "email": "aman1234@gmail.com",
+    "password": "$2b$10$/8j9AjaHp90iK8O/eCEYOOF3/RECnEp8wd/TVe.isdqz8PdOXJ0vG",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {},
+    "assessxScores": {},
+    "hirexApplications": [],
+    "attemptsLeft": 3,
+    "freeAttemptUsed": false,
+    "hasAccessedAssessXBefore": false
+  },
+  {
+    "id": "72f4efda-98b2-46aa-beed-f3981c3692e7",
+    "username": "aman14789",
+    "email": "aman14789@gmail.com",
+    "password": "$2b$10$914tGF9VSnZJJ/IdKqTXNOr6NZSG6uzXQDAAHCxdhU.Q4YhHpc8DW",
+    "role": "recruiter",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {},
+    "assessxScores": {},
+    "hirexApplications": [],
+    "attemptsLeft": 3,
+    "freeAttemptUsed": false,
+    "hasAccessedAssessXBefore": false,
+    "jobPostings": []
+  },
+  {
+    "id": "9d1aa84e-569f-4bc1-8a77-e853240914a3",
+    "username": "aman159",
+    "email": "aman159@gmail.com",
+    "password": "$2b$10$DWHgsR32a0pgffx.9SX7KeEAldpWuuqev2whLYRpOaSlR1d3NSkG6",
+    "role": "jobSeeker",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {
+      "Basic Hygiene Practices": {
+        "Hand Hygiene": {
+          "completed": false,
+          "passed": false,
+          "timeLeft": 0
+        },
+        "Surface Disinfection": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 120
+        }
+      },
+      "Patient Communication Essentials": {
+        "Active Listening": {
+          "completed": false,
+          "passed": false,
+          "timeLeft": 240
+        },
+        "Empathy in Care": {
+          "completed": false,
+          "passed": false,
+          "timeLeft": 180
+        }
+      }
+    },
+    "assessxScores": {
+      "72f7a268-f6ae-4292-a3d5-88ed50fdab21": {
+        "totalScore": 30,
+        "totalQuestions": 10,
+        "categoryBreakdown": {
+          "Anatomy": 2,
+          "Behavioral": 1
+        },
+        "dateCompleted": "2025-06-13T11:35:59.806Z"
+      },
+      "392c2657-16ea-4cee-a027-8b1ff9161e03": {
+        "totalScore": 40,
+        "totalQuestions": 10,
+        "categoryBreakdown": {
+          "Hygiene": 1,
+          "Anatomy": 2,
+          "Emergencies": 1
+        },
+        "dateCompleted": "2025-06-13T20:48:18.086Z"
+      }
+    },
+    "hirexApplications": [
+      "cd6eb43b-2e14-438f-b1ba-a0ff079b5452"
+    ],
+    "attemptsLeft": 1,
+    "freeAttemptUsed": false,
+    "hasAccessedAssessXBefore": false,
+    "appliedJobs": [
+      "b771796b-003f-41a9-8fe4-b00c5ef53330"
+    ]
+  },
+  {
+    "id": "f82962cc-06f2-4819-bc6c-867ca140cea1",
+    "username": "aman10",
+    "email": "aman10@gmail.com",
+    "password": "$2b$10$leyUlbbv/7xqfSCY/9n4CeMLc8Mq.W2vpPMcbnDOKPRlM.NARv88K",
+    "role": "jobSeeker",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {
+      "Basic Hygiene Practices": {
+        "Hand Hygiene": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 180,
+          "videosCompleted": [
+            false,
+            false,
+            true
+          ]
+        },
+        "Surface Disinfection": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 120,
+          "videosCompleted": []
+        }
+      },
+      "Patient Communication Essentials": {
+        "Active Listening": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 179
+        },
+        "Empathy in Care": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 180
+        }
+      },
+      "Infection Control Basics": {
+        "Personal Protective Equipment (PPE)": {
+          "completed": true,
+          "passed": false,
+          "timeLeft": 300
+        },
+        "Standard Precautions": {
+          "completed": false,
+          "passed": false,
+          "timeLeft": 240,
+          "videosCompleted": []
+        }
+      }
+    },
+    "assessxScores": {
+      "2fedef99-db9e-42ec-8bba-2e91788037ae": {
+        "totalScore": 20,
+        "totalQuestions": 10,
+        "categoryBreakdown": {
+          "Vitals": 1,
+          "Anatomy": 1
+        },
+        "dateCompleted": "2025-06-12T21:21:38.541Z"
+      },
+      "5cd7697f-009a-40f6-9666-4eeda4ac3d53": {
+        "totalScore": 50,
+        "totalQuestions": 10,
+        "categoryBreakdown": {
+          "Hygiene": 1,
+          "Anatomy": 1,
+          "First Aid": 1,
+          "Emergencies": 1,
+          "Vitals": 1
+        },
+        "dateCompleted": "2025-06-13T10:44:10.247Z"
+      }
+    },
+    "appliedJobs": [
+      "78d0331e-16c4-46be-963d-c49d5fa3ae74",
+      "2e38b58e-ae1c-40da-a0dc-d9b778c6da1e",
+      "9839095b03cd0fc8feda4e12bee146e9",
+      "9675ccc223b085b9b95a34cdc46bf4b3"
+    ],
+    "attemptsLeft": 0,
+    "freeAttemptUsed": true,
+    "hasAccessedAssessXBefore": true
+  },
+  {
+    "id": "24599b75-516d-40b7-af8b-32953ca11f48",
+    "username": "aman14",
+    "email": "aman14@gmail.com",
+    "password": "$2b$10$BOtT2DESfUoZLE4bos78YOll67VjJnYC9ilFu0115edms0IuQKZlq",
+    "role": "recruiter",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {
+      "Basic Hygiene Practices": {
+        "Hand Hygiene": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 180
+        },
+        "Surface Disinfection": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 120
+        }
+      }
+    },
+    "assessxScores": {
+      "9ff7f382-ad42-4eac-83d9-32c99255a41d": {
+        "totalScore": 50,
+        "totalQuestions": 10,
+        "categoryBreakdown": {
+          "Emergencies": 2,
+          "First Aid": 1,
+          "Medical Terms": 1,
+          "Anatomy": 1
+        },
+        "dateCompleted": "2025-06-13T11:42:19.752Z"
+      }
+    },
+    "appliedJobs": [],
+    "attemptsLeft": 2,
+    "freeAttemptUsed": false,
+    "hasAccessedAssessXBefore": false,
+    "jobPostings": []
+  },
+  {
+    "id": "c6a216cb-1f44-457b-bccd-f329c82e20f0",
+    "username": "aman11",
+    "email": "aman11@gmail.com",
+    "password": "$2b$10$icR2nx0nKd3tCSST2/RdruuWSAkvsIlDdIouKwMc1FIc7ylpK7./O",
+    "role": "recruiter",
+    "profileImage": "https://placehold.co/100x100/A0B4D8/ffffff?text=A",
+    "trainxProgress": {
+      "Basic Hygiene Practices": {
+        "Hand Hygiene": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 180
+        },
+        "Surface Disinfection": {
+          "completed": true,
+          "passed": true,
+          "timeLeft": 120
+        }
+      }
+    },
+    "assessxScores": {
+      "b1d541ad-bd58-4357-b843-1b33aa83ea1a": {
+        "totalScore": 20,
+        "totalQuestions": 10,
+        "categoryBreakdown": {
+          "Anatomy": 2
+        },
+        "dateCompleted": "2025-06-13T21:10:10.439Z"
+      }
+    },
+    "appliedJobs": [],
+    "attemptsLeft": 2,
+    "freeAttemptUsed": false,
+    "hasAccessedAssessXBefore": false,
+    "jobPostings": []
+  }
+]

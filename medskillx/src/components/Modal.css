@@ -1,0 +1,208 @@
+/* src/styles/Modal.css */
+
+/* ------------------------------------------------------------------- */
+/* --- 1. Base Modal Overlay (The Darkened Backdrop) --- */
+/* ------------------------------------------------------------------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Deeper, more atmospheric overlay with a slight blue tint for sophistication */
+    background-color: rgba(30, 41, 59, 0.75); /* Dark Slate Blue with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to ensure it's on top */
+    backdrop-filter: blur(8px); /* Stronger, more elegant blur effect */
+    padding: 1.5rem; /* Padding for mobile view to prevent content from touching edges */
+
+    /* Animation for a smooth entrance */
+    opacity: 0;
+    animation: fadeInModalOverlay 0.3s ease-out forwards;
+}
+
+@keyframes fadeInModalOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ------------------------------------------------------------------- */
+/* --- 2. Modal Content (The Main Dialog Box) --- */
+/* ------------------------------------------------------------------- */
+.modal-content {
+    background-color: #FFFFFF; /* Pure white for a clean look */
+    border-radius: 16px; /* More pronounced rounded corners */
+    /* Refined, multi-layered shadow for depth and lift */
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.15), /* Soft, wide shadow */
+        0 0 0 1px rgba(0, 0, 0, 0.05); /* Subtle inner border/outline */
+    width: 100%;
+    max-width: 800px; /* Increased max-width for more content space */
+    max-height: calc(100vh - 4rem); /* Dynamic max height with more margin */
+    overflow-y: auto; /* Scrollable content */
+    position: relative; /* For absolute positioning of close button */
+
+    /* Smooth entry animation */
+    opacity: 0;
+    transform: scale(0.95) translateY(20px); /* Starts slightly scaled down and lower */
+    animation: fadeInScaleUpModalContent 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards; /* More sophisticated ease */
+    animation-delay: 0.05s; /* Slight delay after backdrop */
+}
+
+@keyframes fadeInScaleUpModalContent {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Scrollbar styling for a cleaner look */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* A light gray blue */
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* Darker on hover */
+}
+
+
+/* ------------------------------------------------------------------- */
+/* --- 3. Modal Header --- */
+/* ------------------------------------------------------------------- */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 2.5rem; /* More generous padding */
+    border-bottom: 1px solid #E5E7EB; /* Lighter, more subtle border */
+    background-color: #F9FAFB; /* Very light gray for header background */
+    border-top-left-radius: 16px; /* Match content border-radius */
+    border-top-right-radius: 16px; /* Match content border-radius */
+}
+
+.modal-title {
+    font-size: 2rem; /* Larger, more impactful title */
+    color: #1F2937; /* Darker, almost black text */
+    margin: 0;
+    font-weight: 800; /* Extra bold for prominence */
+    line-height: 1.2; /* Slightly tighter line height */
+}
+
+/* ------------------------------------------------------------------- */
+/* --- 4. Modal Close Button --- */
+/* ------------------------------------------------------------------- */
+.modal-close-button {
+    background: none;
+    border: none;
+    font-size: 2.5rem; /* Remains large for easy clicking */
+    color: #9CA3AF; /* Muted gray for subtlety */
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+    padding: 0.5rem; /* Larger hit area */
+    border-radius: 50%; /* Perfect circle */
+    display: flex; /* Use flex to center the 'x' if it's an icon */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close-button:hover {
+    color: #4B5563; /* Darker on hover */
+    background-color: #F3F4F6; /* Light background on hover */
+    transform: rotate(90deg) scale(1.1); /* More pronounced spin and slight enlarge */
+}
+
+/* ------------------------------------------------------------------- */
+/* --- 5. Modal Body (Main Content Area) --- */
+/* ------------------------------------------------------------------- */
+.modal-body {
+    padding: 2.5rem; /* Generous padding for content */
+    color: #374151; /* Dark gray for body text */
+    line-height: 1.6; /* Improved readability for paragraphs */
+}
+
+/* ------------------------------------------------------------------- */
+/* --- 6. Responsive Adjustments --- */
+/* ------------------------------------------------------------------- */
+
+/* Tablets and larger phones (e.g., 768px to 1023px) */
+@media (max-width: 1023px) {
+    .modal-content {
+        max-width: 90%; /* Adjust max-width */
+        max-height: calc(100vh - 3rem); /* Slightly more forgiving height */
+    }
+    .modal-header {
+        padding: 1.5rem 2rem;
+    }
+    .modal-title {
+        font-size: 1.75rem;
+    }
+    .modal-body {
+        padding: 2rem;
+    }
+}
+
+/* Smaller tablets and large phones (e.g., 481px to 767px) */
+@media (max-width: 767px) {
+    .modal-content {
+        border-radius: 12px; /* Slightly less rounded */
+        max-width: 95%; /* Take up more width */
+        max-height: calc(100vh - 2rem); /* Even more forgiving height */
+    }
+    .modal-header {
+        padding: 1.25rem 1.5rem;
+    }
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    .modal-close-button {
+        font-size: 2.2rem;
+        padding: 0.4rem;
+    }
+    .modal-body {
+        padding: 1.5rem;
+    }
+}
+
+/* Extra small screens (e.g., up to 480px - typical mobile portrait) */
+@media (max-width: 480px) {
+    .modal-overlay {
+        padding: 0.75rem; /* Less padding to maximize content space */
+    }
+    .modal-content {
+        border-radius: 8px; /* Standard mobile corner radius */
+        max-width: 100%; /* Full width on tiny screens */
+        max-height: calc(100vh - 1.5rem); /* Almost full height */
+    }
+    .modal-header {
+        padding: 1rem 1.25rem;
+    }
+    .modal-title {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+    .modal-close-button {
+        font-size: 2rem;
+        padding: 0.3rem;
+    }
+    .modal-body {
+        padding: 1.25rem;
+    }
+}

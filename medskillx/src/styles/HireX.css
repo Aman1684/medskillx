@@ -1,0 +1,1017 @@
+/* Variables for consistent theming */
+:root {
+    --primary-color: #4A90E2; /* A professional blue */
+    --secondary-color: #50B749; /* A vibrant green for actions/success */
+    --accent-color: #FFC107; /* A bright yellow for highlights */
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #F8F9FA;
+    --bg-card: #FFFFFF;
+    --border-light: #E0E0E0;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --border-radius-sm: 6px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 14px;
+    --transition-speed: 0.3s;
+}
+
+/* General Body and Container Styles */
+body {
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.hirex-container {
+    max-width: 1200px;
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--spacing-md);
+    box-shadow: 0 8px 30px var(--shadow-light);
+    border-radius: var(--border-radius-lg);
+    background-color: var(--bg-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl); /* Space between major sections */
+}
+
+/* Base Styles for Buttons and Inputs */
+.btn-primary, .btn-secondary, .btn-info, .btn-outline-secondary {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: #3a7dc9;
+    border-color: #3a7dc9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+}
+.btn-secondary:hover {
+    background-color: #459a40;
+    border-color: #459a40;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(80, 183, 73, 0.3);
+}
+
+.btn-info {
+    background-color: #17A2B8; /* Teal */
+    color: white;
+    border: 1px solid #17A2B8;
+}
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #138496;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(23, 162, 184, 0.3);
+}
+
+.btn-outline-secondary {
+    background: none;
+    border: 1px solid var(--text-light);
+    color: var(--text-light);
+}
+.btn-outline-secondary:hover {
+    background-color: var(--text-light);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: var(--bg-card);
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.input-field:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* Common Card/Section Styles */
+.card-section {
+    padding: var(--spacing-xl);
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 15px var(--shadow-light);
+    border: 1px solid var(--border-light);
+}
+
+.card-shadow {
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Loading and Access Denied Screens */
+.hirex-loading-screen,
+.hirex-access-denied-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: var(--bg-light);
+}
+
+.loading-content,
+.access-denied-card {
+    background-color: var(--bg-card);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 5px 20px var(--shadow-light);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+    color: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-md);
+}
+
+.spinner-small {
+    animation: spin 1s linear infinite;
+    color: currentColor; /* Inherit color from parent status message */
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-content span {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.access-denied-title {
+    font-size: 2.5rem;
+    color: #DC3545; /* Red */
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.access-denied-message {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+.access-denied-message .highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hirex-hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #6A5ACD 100%); /* Blue to Purple gradient */
+    color: white;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0; /* Align with container top */
+}
+
+.hirex-main-title {
+    font-size: 2.8rem; /* Slightly smaller */
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.hirex-main-title .icon {
+    font-size: 2.5rem; /* Match new title size */
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hirex-subtitle {
+    font-size: 1.15rem; /* Slightly smaller */
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg) auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.user-info-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: var(--border-radius-md);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.assessx-score-display, /* Renamed class */
+.welcome-message {
+    font-size: 1.05rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.score-value {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.username, .user-role {
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Action Button Group (Replaces post-job-button-wrapper) */
+.action-button-group {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* Status Messages (for promoteToRecruiter) */
+.status-message {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-light); /* Default for generic status */
+    color: var(--text-dark);
+    animation: fadeIn var(--transition-speed) ease-out;
+}
+
+.status-message.loading {
+    background-color: #E0F7FA;
+    color: #007bff;
+}
+
+.status-message.error {
+    background-color: #FDEDED;
+    color: #DC3545;
+}
+
+.status-message.success {
+    background-color: #E6FFED;
+    color: var(--secondary-color);
+}
+
+/* Section Titles (Common) */
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.section-title .icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.section-title-with-button {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+.section-title-with-button .icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+
+/* Recruiter Panel Section */
+.recruiter-panel-section {
+    /* Uses .card-section styles */
+}
+
+.recruiter-panel-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+    .recruiter-panel-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg); /* Slightly reduced gap */
+}
+
+@media (min-width: 992px) {
+    .how-it-works-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.how-it-works-card {
+    padding: var(--spacing-lg); /* Reduced padding */
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border-light);
+    transition: transform var(--transition-speed) ease;
+}
+.how-it-works-card:hover {
+    transform: translateY(-5px);
+}
+
+.how-it-works-card.primary-gradient {
+    background: linear-gradient(135deg, #e0f2f7 0%, #ffffff 100%);
+    border-color: #b3e0ff;
+}
+
+.how-it-works-card.secondary-gradient {
+    background: linear-gradient(135deg, #fefae0 0%, #ffffff 100%); /* Lighter yellow */
+    border-color: #ffd700;
+}
+
+.card-header { /* Renamed class */
+    font-size: 1.8rem; /* Smaller header */
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md); /* Reduced margin */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    border-bottom: 1px solid rgba(0, 123, 255, 0.15); /* Thinner border */
+    padding-bottom: var(--spacing-sm); /* Reduced padding */
+    font-weight: 600;
+}
+
+.how-it-works-card.secondary-gradient .card-header {
+    color: var(--accent-color);
+    border-bottom-color: rgba(255, 193, 7, 0.15);
+}
+
+.icon-large {
+    font-size: 2rem; /* Adjusted size */
+}
+
+.card-content-grid { /* Renamed class */
+    display: grid;
+    gap: var(--spacing-md); /* Smaller gap for content items */
+}
+
+.card-content-grid > div {
+    padding-bottom: var(--spacing-sm); /* Padding for each content block */
+    border-bottom: 1px dashed rgba(0,0,0,0.08); /* Subtle separator */
+}
+.card-content-grid > div:last-child {
+    border-bottom: none;
+}
+
+.sub-heading-icon { /* Renamed class */
+    font-size: 1.2rem; /* Smaller subtitle */
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs); /* Reduced margin */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.icon-small {
+    font-size: 1.4rem; /* Adjusted size */
+    color: var(--primary-color);
+}
+.how-it-works-card.secondary-gradient .icon-small {
+    color: var(--accent-color);
+}
+
+
+.description-text { /* Renamed class */
+    font-size: 0.95rem; /* Smaller text */
+    color: var(--text-light);
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: var(--spacing-sm);
+}
+
+.feature-list li {
+    background-color: #E6F7FF; /* Lighter blue */
+    padding: 6px var(--spacing-sm); /* Reduced padding */
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 6px; /* Reduced margin */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    border-left: 3px solid var(--primary-color); /* Thinner border */
+    font-size: 0.9rem; /* Smaller text */
+}
+
+.feature-list li::before {
+    content: '✔'; /* Changed checkmark for consistency */
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.feature-highlight {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+
+/* Filters Section */
+.filters-section {
+    /* Uses .card-section styles */
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg); /* Reduced gap */
+}
+
+@media (min-width: 768px) {
+    .filter-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly smaller min-width */
+    }
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-label {
+    font-size: 1rem; /* Slightly smaller */
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.label-icon {
+    color: var(--primary-color);
+    font-size: 1.2rem; /* Adjusted size */
+}
+
+.custom-select {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-light);
+}
+
+.apply-filters-wrapper {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+}
+
+/* Matched Jobs Section */
+.matched-jobs-section {
+    /* Uses .card-section styles */
+}
+
+.status-info-box { /* Renamed class */
+    text-align: center;
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    margin-top: var(--spacing-lg);
+    animation: fadeIn 0.7s ease-out;
+}
+
+.status-info-box.loading {
+    background-color: #E0F7FA;
+    border: 1px dashed #B3E0FF;
+    color: var(--primary-color);
+}
+
+.status-info-box.error {
+    background-color: #FEEAEA;
+    border: 1px dashed #F5B0B0;
+    color: #DC3545;
+}
+
+.status-info-box.no-results {
+    background-color: #F0F0F0;
+    border: 1px dashed #D3D3D3;
+    color: var(--text-light);
+}
+
+.status-info-box .loading-content {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.error-message {
+    font-size: 1.2rem;
+    color: inherit; /* Inherit from parent info box */
+    margin-bottom: var(--spacing-xs);
+}
+
+.no-jobs-message {
+    font-size: 1.3rem;
+    color: inherit;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.hint-text { /* Renamed class */
+    font-size: 0.95rem;
+    color: inherit;
+}
+
+
+.job-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md); /* Reduced gap */
+}
+
+@media (min-width: 600px) {
+    .job-cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min-width for more compact cards */
+    }
+}
+
+.job-card {
+    background-color: var(--bg-card);
+    padding: var(--spacing-md); /* Reduced padding */
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--border-light);
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-hover);
+    border-color: var(--primary-color); /* Highlight border on hover */
+}
+
+.job-card-title {
+    font-size: 1.4rem; /* Smaller title */
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.job-card-description {
+    font-size: 0.9rem; /* Smaller description */
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit description to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.job-card-details {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px; /* Compact details */
+}
+
+.detail-item {
+    font-size: 0.85rem; /* Even smaller details text */
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.detail-icon {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.btn-apply-job {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px; /* Reduced padding */
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.95rem; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    width: 100%;
+    margin-top: auto; /* Push button to bottom */
+    font-weight: 500;
+}
+
+.btn-apply-job:hover:not(:disabled) {
+    background-color: #3a7dc9;
+    transform: translateY(-2px);
+}
+
+.btn-apply-job:disabled {
+    background-color: #E0E0E0;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Suggested Action Section */
+.suggested-action-section {
+    /* Uses .card-section styles */
+    background-color: #FFF8E1; /* Lighter yellow */
+    border: 1px solid #FFECB3;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    animation: fadeIn 0.7s ease-out;
+}
+
+.alert-warning {
+    background-color: #FFF8E1; /* A light, warm warning background */
+    border-color: #FFECB3;
+}
+
+.action-icon-wrapper { /* Renamed class */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.action-icon {
+    font-size: 3.5rem; /* Larger icon */
+    line-height: 1;
+    color: var(--accent-color);
+}
+
+.action-content {
+    flex: 1;
+}
+
+.action-title {
+    font-size: 1.6rem; /* Smaller title */
+    color: #856404; /* Darker yellow */
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.action-message {
+    font-size: 1rem; /* Smaller message */
+    color: #856404;
+    margin-bottom: var(--spacing-lg);
+}
+
+.score-highlight, .highlight-text {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hirex-container {
+        margin: var(--spacing-lg) auto;
+        gap: var(--spacing-lg);
+    }
+    .hirex-hero-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    .hirex-main-title {
+        font-size: 2.2rem;
+    }
+    .hirex-main-title .icon {
+        font-size: 2rem;
+    }
+    .hirex-subtitle {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-lg);
+    }
+    .user-info-bar {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+    .assessx-score-display, .welcome-message {
+        font-size: 0.95rem;
+    }
+    .score-value {
+        font-size: 1.1rem;
+    }
+    .btn-secondary {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+    .section-title, .section-title-with-button {
+        font-size: 1.8rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+    }
+    .section-title .icon, .section-title-with-button .icon {
+        font-size: 1.8rem;
+    }
+    .btn-outline-secondary {
+        margin-top: var(--spacing-sm);
+    }
+    .card-section {
+        padding: var(--spacing-lg);
+    }
+    .how-it-works-card {
+        padding: var(--spacing-md);
+    }
+    .card-header {
+        font-size: 1.6rem;
+    }
+    .icon-large {
+        font-size: 1.8rem;
+    }
+    .sub-heading-icon {
+        font-size: 1.1rem;
+    }
+    .icon-small {
+        font-size: 1.3rem;
+    }
+    .description-text {
+        font-size: 0.9rem;
+    }
+    .filter-label {
+        font-size: 0.95rem;
+    }
+    .input-field {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+    .job-card {
+        padding: var(--spacing-sm);
+    }
+    .job-card-title {
+        font-size: 1.25rem;
+    }
+    .job-card-description {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 4; /* More lines for smaller screens if needed */
+    }
+    .detail-item {
+        font-size: 0.8rem;
+    }
+    .btn-apply-job {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    .suggested-action-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+    }
+    .action-icon {
+        font-size: 3rem;
+    }
+    .action-title {
+        font-size: 1.4rem;
+    }
+    .action-message {
+        font-size: 0.95rem;
+    }
+    .btn-info {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hirex-container {
+        padding: 0 var(--spacing-sm);
+    }
+    .hirex-hero-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    .hirex-main-title {
+        font-size: 1.8rem;
+        gap: var(--spacing-sm);
+    }
+    .hirex-main-title .icon {
+        font-size: 1.6rem;
+    }
+    .user-info-bar {
+        padding: var(--spacing-xs);
+        gap: var(--spacing-xs);
+    }
+    .assessx-score-display, .welcome-message {
+        font-size: 0.9rem;
+    }
+    .score-value {
+        font-size: 1.1rem;
+    }
+    .btn-secondary {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+    .section-title, .section-title-with-button {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-xs);
+    }
+    .section-title .icon, .section-title-with-button .icon {
+        font-size: 1.5rem;
+    }
+    .recruiter-panel-content {
+        gap: var(--spacing-md);
+    }
+    .how-it-works-card {
+        padding: var(--spacing-sm);
+    }
+    .card-header {
+        font-size: 1.4rem;
+    }
+    .icon-large {
+        font-size: 1.6rem;
+    }
+    .sub-heading-icon {
+        font-size: 1rem;
+    }
+    .icon-small {
+        font-size: 1.2rem;
+    }
+    .filter-grid {
+        gap: var(--spacing-md);
+    }
+    .job-card {
+        padding: 1rem;
+    }
+    .job-card-title {
+        font-size: 1.15rem;
+    }
+    .job-card-description {
+        font-size: 0.8rem;
+        -webkit-line-clamp: 5; /* More lines on very small screens */
+    }
+    .detail-item {
+        font-size: 0.75rem;
+    }
+    .btn-apply-job {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    .suggested-action-section {
+        padding: var(--spacing-md);
+    }
+    .action-icon {
+        font-size: 2.5rem;
+    }
+    .action-title {
+        font-size: 1.2rem;
+    }
+    .action-message {
+        font-size: 0.85rem;
+    }
+    .btn-info {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+}
+
+
+/* --- Modal Backdrop for ApplyToJobForm --- */
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 4w;
+    width: 1w;
+    height: 1h;
+    /* This is the key change for opaque black */
+    background-color: rgba(0, 0, 0, 1)!important; /* Black with 100% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    z-index: 1000; /* Ensure it's on top of other content */
+    overflow-y: auto; /* Allow scrolling if content is taller than viewport */
+    padding: 1rem; /* Add some padding around the modal */
+}
+
+/* Optional: Animation for the backdrop */
+@keyframes fadeInBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalBackdrop.show {
+  animation: fadeInBackdrop 0.3s ease-out forwards;
+}
+
+/* For hiding the backdrop without display:none to allow animation */
+.modalBackdrop.hide {
+  opacity: 0;
+  pointer-events: none; /* Make it unclickable when hidden */
+  transition: opacity 0.3s ease-out;
+}

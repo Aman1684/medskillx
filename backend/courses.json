@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "title": "Basic Hygiene Practices",
+    "modules": [
+      {
+        "name": "Hand Hygiene",
+        "content": "Learn how to maintain hygiene in healthcare settings including handwashing techniques. This module emphasizes the critical importance of proper hand hygiene in preventing the spread of infections in all healthcare environments.",
+        "videoUrl": "https://www.youtube.com/embed/WxtJqyIyThU",
+        "pdfUrl": "https://www.who.int/gpsc/5may/tools/wash-your-hands.pdf",
+        "quiz": [
+          {
+            "question": "What is the minimum recommended duration for handwashing with soap and water?",
+            "options": ["10 seconds", "20 seconds", "30 seconds", "1 minute"],
+            "answer": 1,
+            "explanation": "WHO recommends washing hands for at least 20 seconds to effectively remove germs."
+          }
+        ],
+        "timeLimit": 3
+      },
+      {
+        "name": "Surface Disinfection",
+        "content": "Understand the proper techniques for disinfecting surfaces to maintain a sterile environment.",
+        "videoUrl": "https://www.youtube.com/embed/TVbI55pDdaI",
+        "pdfUrl": "https://www.cdc.gov/infectioncontrol/pdf/guidelines/disinfection-guidelines.pdf",
+        "quiz": [
+          {
+            "question": "What is the primary goal of surface disinfection?",
+            "options": ["To make surfaces shiny", "To reduce the number of viable microorganisms", "To improve the smell of a room", "To eliminate spores"],
+            "answer": 1,
+            "explanation": "Disinfection reduces viable microorganisms; sterilization eliminates spores."
+          }
+        ],
+        "timeLimit": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Patient Communication Essentials",
+    "modules": [
+      {
+        "name": "Active Listening",
+        "content": "Develop skills in active listening to build rapport and understand patient needs effectively.",
+        "videoUrl": "https://www.youtube.com/embed/YT8rY_o5VhY",
+        "pdfUrl": "https://www.skillsyouneed.com/ips/active-listening.html",
+        "quiz": [
+          {
+            "question": "Which of these is a key component of active listening?",
+            "options": ["Interrupting", "Nodding and eye contact", "Planning next question", "Changing topic"],
+            "answer": 1,
+            "explanation": "Non-verbal cues like nodding show engagement and active listening."
+          }
+        ],
+        "timeLimit": 4
+      },
+      {
+        "name": "Empathy in Care",
+        "content": "Understand how empathy improves patient outcomes and increases satisfaction in care delivery.",
+        "videoUrl": "https://www.youtube.com/embed/1Evwgu369Jw",
+        "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6101692/",
+        "quiz": [
+          {
+            "question": "Why is empathy important in patient communication?",
+            "options": ["Reduces treatment time", "Improves satisfaction", "Eliminates need for documentation", "Shortens hospital stays"],
+            "answer": 1,
+            "explanation": "Empathy increases patient trust and improves compliance."
+          }
+        ],
+        "timeLimit": 3
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Infection Control Basics",
+    "modules": [
+      {
+        "name": "Personal Protective Equipment (PPE)",
+        "content": "Learn how and when to use PPE such as gloves, masks, and gowns to protect both healthcare workers and patients.",
+        "videoUrl": "https://www.youtube.com/embed/9ov6a8ympB4",
+        "pdfUrl": "https://www.osha.gov/sites/default/files/publications/OSHA3990.pdf",
+        "quiz": [
+          {
+            "question": "What is the correct order for donning PPE?",
+            "options": ["Gloves, gown, mask", "Gown, mask, gloves", "Mask, gown, gloves", "Gloves, mask, gown"],
+            "answer": 1,
+            "explanation": "CDC recommends gown, mask, goggles/face shield, then gloves."
+          }
+        ],
+        "timeLimit": 5
+      },
+      {
+        "name": "Standard Precautions",
+        "content": "Understand standard precautions to reduce the risk of transmission of pathogens.",
+        "videoUrl": "https://www.youtube.com/embed/w0zGHN9uwFw",
+        "pdfUrl": "https://www.cdc.gov/infectioncontrol/basics/standard-precautions.html",
+        "quiz": [
+          {
+            "question": "Which is NOT a standard precaution?",
+            "options": ["Hand hygiene", "Use of PPE", "Patient isolation", "Safe injections"],
+            "answer": 2,
+            "explanation": "Isolation is a transmission-based precaution."
+          }
+        ],
+        "timeLimit": 4
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Emergency First Aid",
+    "modules": [
+      {
+        "name": "CPR Basics",
+        "content": "Learn the basic steps of cardiopulmonary resuscitation (CPR) to respond to cardiac emergencies effectively.",
+        "videoUrl": "https://www.youtube.com/embed/cosVBV96E2g",
+        "pdfUrl": "https://www.redcross.org/content/dam/redcross/atg/PDFs/Take-a-Class/CPR/American-Red-Cross-CPR-AED-Manual.pdf",
+        "quiz": [
+          {
+            "question": "What is the recommended compression rate during CPR?",
+            "options": ["60–80/min", "100–120/min", "130–150/min", "160–180/min"],
+            "answer": 1,
+            "explanation": "The ideal rate is 100–120 compressions per minute."
+          }
+        ],
+        "timeLimit": 6
+      },
+      {
+        "name": "Bleeding Control",
+        "content": "Master the steps for controlling severe bleeding using pressure, dressings, and tourniquets.",
+        "videoUrl": "https://www.youtube.com/embed/f2PfbjGlu4g",
+        "pdfUrl": "https://www.stopthebleed.org/training-resources/",
+        "quiz": [
+          {
+            "question": "What is the first step to control severe bleeding?",
+            "options": ["Apply a tourniquet", "Apply pressure", "Call for help", "Elevate the wound"],
+            "answer": 1,
+            "explanation": "Direct pressure is the primary method for bleeding control."
+          }
+        ],
+        "timeLimit": 3
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Medication Safety",
+    "modules": [
+      {
+        "name": "The 5 Rights of Medication Administration",
+        "content": "Learn the Five Rights: right patient, right drug, right dose, right route, and right time to prevent medication errors.",
+        "videoUrl": "https://www.youtube.com/embed/ABZCnsK5E78",
+        "pdfUrl": "https://www.ismp.org/recommendations/five-rights-medication-administration",
+        "quiz": [
+          {
+            "question": "Which of the following is NOT one of the 5 Rights?",
+            "options": ["Right patient", "Right prescription", "Right route", "Right time"],
+            "answer": 1,
+            "explanation": "‘Right prescription’ is not one of the standard 5 Rights."
+          }
+        ],
+        "timeLimit": 4
+      },
+      {
+        "name": "High Alert Medications",
+        "content": "Explore how to safely handle medications that have a high risk of causing harm if used in error.",
+        "videoUrl": "https://www.youtube.com/embed/OHc6W-d4f5s",
+        "pdfUrl": "https://www.ismp.org/tools/high-alert-medications",
+        "quiz": [
+          {
+            "question": "What should be double-checked before administering a high-alert drug?",
+            "options": ["Color", "Smell", "Dosage and patient", "Package design"],
+            "answer": 2,
+            "explanation": "Double-checking the dose and patient can prevent fatal errors."
+          }
+        ],
+        "timeLimit": 5
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Mental Health Awareness for Healthcare Workers",
+    "modules": [
+      {
+        "name": "Stress Management",
+        "content": "Discover practical strategies to manage stress and avoid burnout in a demanding healthcare environment.",
+        "videoUrl": "https://www.youtube.com/embed/hnpQrMqDoqE",
+        "pdfUrl": "https://www.apa.org/helpcenter/stress-healthcare-professionals.pdf",
+        "quiz": [
+          {
+            "question": "Which activity helps reduce stress at work?",
+            "options": ["Skipping meals", "Avoiding colleagues", "Breathing exercises", "Multitasking"],
+            "answer": 2,
+            "explanation": "Deep breathing and mindfulness are proven stress reducers."
+          }
+        ],
+        "timeLimit": 3
+      },
+      {
+        "name": "Dealing with Grief",
+        "content": "Learn approaches to process grief and provide emotional support to yourself and colleagues.",
+        "videoUrl": "https://www.youtube.com/embed/p8oxndup1QM",
+        "pdfUrl": "https://www.nhp.gov.in/NHPfiles/grief-counseling.pdf",
+        "quiz": [
+          {
+            "question": "What is the first stage of grief according to the Kübler-Ross model?",
+            "options": ["Acceptance", "Anger", "Denial", "Bargaining"],
+            "answer": 2,
+            "explanation": "Denial is typically the first stage in the grief process."
+          }
+        ],
+        "timeLimit": 4
+      }
+    ]
+  }
+]

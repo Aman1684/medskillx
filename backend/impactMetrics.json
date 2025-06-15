@@ -1,0 +1,30 @@
+[
+  {
+    "id": "users",
+    "label": "Healthcare Professionals Empowered",
+    "value": 12500,
+    "icon": "🧑‍⚕️",
+    "unit": "+"
+  },
+  {
+    "id": "modules",
+    "label": "WHO-aligned Learning Modules",
+    "value": 180,
+    "icon": "📚",
+    "unit": "+"
+  },
+  {
+    "id": "jobs",
+    "label": "Jobs Placed Successfully",
+    "value": 2500,
+    "icon": "💼",
+    "unit": "+"
+  },
+  {
+    "id": "countries",
+    "label": "Countries Reached",
+    "value": 15,
+    "icon": "🌍",
+    "unit": ""
+  }
+]

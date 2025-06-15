@@ -1,0 +1,90 @@
+[
+  {
+    "id": "9839095b03cd0fc8feda4e12bee146e9",
+    "title": "sdcfa",
+    "description": "sdcfs",
+    "company": "dsfsd",
+    "location": "sfsdg",
+    "salary": "sdfsd",
+    "type": "Daily Shifts",
+    "experience": "Senior-Level",
+    "requiredScore": 0,
+    "qualifications": "",
+    "applicationDeadline": "",
+    "contactEmail": "",
+    "skills": [],
+    "customQuestions": [],
+    "employerId": "aa522cc8-bd22-484f-a130-b17bd7d2d3cd",
+    "postedAt": "2025-06-13T10:06:32.959Z",
+    "applicants": [
+      {
+        "userId": "f82962cc-06f2-4819-bc6c-867ca140cea1",
+        "applicationId": "11937497e47f24d0d10607b856890fde",
+        "status": "Pending"
+      }
+    ]
+  },
+  {
+    "id": "9675ccc223b085b9b95a34cdc46bf4b3",
+    "title": "doctor",
+    "description": "xgfnn",
+    "company": "fxgb",
+    "location": "shdy",
+    "salary": "fgb",
+    "type": "Daily Shifts",
+    "experience": "Manager",
+    "requiredScore": 0,
+    "qualifications": "",
+    "applicationDeadline": "",
+    "contactEmail": "",
+    "skills": [],
+    "customQuestions": [],
+    "employerId": "aa522cc8-bd22-484f-a130-b17bd7d2d3cd",
+    "postedAt": "2025-06-13T10:16:14.636Z",
+    "applicants": [
+      {
+        "userId": "f82962cc-06f2-4819-bc6c-867ca140cea1",
+        "applicationId": "a4fb166023c82ecd66bae06debe7df1c",
+        "status": "Pending"
+      }
+    ]
+  },
+  {
+    "id": "cd79ab22e90ed41873a0400ec52956f3",
+    "title": "ewf",
+    "description": "rsetg",
+    "company": "strg",
+    "location": "str",
+    "salary": "strg",
+    "type": "Monthly Contracts",
+    "experience": "Entry-Level",
+    "requiredScore": 0,
+    "qualifications": "",
+    "applicationDeadline": "",
+    "contactEmail": "",
+    "skills": [],
+    "customQuestions": [],
+    "employerId": "24599b75-516d-40b7-af8b-32953ca11f48",
+    "postedAt": "2025-06-13T11:43:51.184Z",
+    "applicants": []
+  },
+  {
+    "id": "3c873f98eb42835682f9d54670dd7fbe",
+    "title": "doctor",
+    "description": "dsf",
+    "company": "sdf",
+    "location": "fdg",
+    "salary": "dfg",
+    "type": "Daily Shifts",
+    "experience": "Entry-Level",
+    "requiredScore": 0,
+    "qualifications": "",
+    "applicationDeadline": "",
+    "contactEmail": "",
+    "skills": [],
+    "customQuestions": [],
+    "employerId": "c6a216cb-1f44-457b-bccd-f329c82e20f0",
+    "postedAt": "2025-06-13T21:11:06.132Z",
+    "applicants": []
+  }
+]

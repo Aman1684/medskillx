@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Junior Medical Assistant",
+    "requiredScore": 0,
+    "workTypes": [
+      "Daily Shift",
+      "Monthly Contract"
+    ],
+    "location": "Delhi",
+    "salary": "10k-15k",
+    "description": "Assist doctors and nurses with patient care and records.",
+    "postedBy": "your_recruiter_id_here" 
+  },
+  {
+    "title": "Certified Nursing Assistant (CNA)",
+    "requiredScore": 1,
+    "workTypes": [
+      "Monthly Contract",
+      "Permanent"
+    ],
+    "location": "Mumbai",
+    "salary": "15k-20k",
+    "description": "Provide basic care to patients in hospitals and clinics.",
+    "postedBy": "your_recruiter_id_here"
+  },
+  
+
+  {
+    "id": "cd6eb43b-2e14-438f-b1ba-a0ff079b5452",
+    "title": "asdfcsd",
+    "company": "dsvcsd",
+    "location": "New York",
+    "salary": "$40K - $60K",
+    "description": "sdcv dsz",
+    "requiredScore": 0,
+    "workTypes": [
+      "Monthly Contracts"
+    ],
+    "companyLogo": "https://placehold.co/100x100/ADD8E6/000000?text=D",
+    "postedBy": "aa522cc8-bd22-484f-a130-b17bd7d2d3cd", 
+    "datePosted": "2025-06-10T19:20:02.948Z",
+    "applicants": [
+      {
+        "userId": "9d1aa84e-569f-4bc1-8a77-e853240914a3",
+        "username": "aman159",
+        "email": "aman159@gmail.com",
+        "dateApplied": "2025-06-10T19:20:56.200Z"
+      }
+    ]
+  },
+  {
+    "id": "f6af0dd8d23d47e4e7488d7438fad884",
+    "title": "cbg",
+    "description": "fb",
+    "location": "Roorkee, Uttaranchal",
+    "salary": "yhfxn",
+    "type": "Monthly Contracts",
+    "experience": "Mid-Level",
+    "skills": [],
+    "customQuestions": [],
+    "postedBy": "aa522cc8-bd22-484f-a130-b17bd7d2d3cd", 
+    "postedAt": "2025-06-13T09:29:54.357Z",
+    "applicants": []
+  },
+  {
+    "id": "job123", 
+    "title": "Software Engineer",
+    "postedBy": "some_recruiter_id_for_this_job", 
+    "applicants": [
+     
+    ]
+  }
+]

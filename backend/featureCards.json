@@ -1,0 +1,21 @@
+[
+  {
+    "title": "📘 TrainX",
+    "description": "Learn healthcare essentials through structured, adaptive WHO-based modules.",
+    "link": "/trainx",
+    "buttonText": "📖 Explore TrainX"
+  },
+  {
+    "title": "🧪 AssessX",
+    "description": "Test your skills with intelligent evaluations & scenarios. Three free attempts.",
+    "link": "/assessx",
+    "buttonText": "📝 Take Assessment"
+    
+  },
+  {
+    "title": "💼 HireX",
+    "description": "Get matched to the right jobs based on your skill score, preferences & location.",
+    "link": "/hirex",
+    "buttonText": "💼 Explore Jobs"
+  }
+]

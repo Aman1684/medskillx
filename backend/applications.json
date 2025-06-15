@@ -1,0 +1,94 @@
+[
+  {
+    "id": "6e6fd06e2e5f960db44c472713a46adf",
+    "jobId": "78d0331e-16c4-46be-963d-c49d5fa3ae74",
+    "userId": "f82962cc-06f2-4819-bc6c-867ca140cea1",
+    "applicantName": "aman10 ",
+    "email": "aman10@gmail.com",
+    "personalInfo": {
+      "firstName": "aman10",
+      "lastName": "",
+      "email": "aman10@gmail.com"
+    },
+    "education": [],
+    "workExperience": [],
+    "skills": [],
+    "customAnswers": {},
+    "consent": {
+      "dataProcessing": true,
+      "accuracyDeclaration": true
+    },
+    "resumePath": "f82962cc-06f2-4819-bc6c-867ca140cea1-1749806018977.pdf",
+    "status": "Pending",
+    "appliedAt": "2025-06-13T09:13:38.999Z"
+  },
+  {
+    "id": "693e0f98e0b289ed359587989e8b6dcf",
+    "jobId": "2e38b58e-ae1c-40da-a0dc-d9b778c6da1e",
+    "userId": "f82962cc-06f2-4819-bc6c-867ca140cea1",
+    "applicantName": "aman10 ",
+    "email": "aman10@gmail.com",
+    "personalInfo": {
+      "firstName": "aman10",
+      "lastName": "",
+      "email": "aman10@gmail.com"
+    },
+    "education": [],
+    "workExperience": [],
+    "skills": [],
+    "customAnswers": {},
+    "consent": {
+      "dataProcessing": true,
+      "accuracyDeclaration": true
+    },
+    "resumePath": "f82962cc-06f2-4819-bc6c-867ca140cea1-1749806409364.pdf",
+    "status": "Pending",
+    "appliedAt": "2025-06-13T09:20:09.397Z"
+  },
+  {
+    "id": "11937497e47f24d0d10607b856890fde",
+    "jobId": "9839095b03cd0fc8feda4e12bee146e9",
+    "userId": "f82962cc-06f2-4819-bc6c-867ca140cea1",
+    "applicantName": "aman10 ",
+    "email": "aman10@gmail.com",
+    "personalInfo": {
+      "firstName": "aman10",
+      "lastName": "",
+      "email": "aman10@gmail.com"
+    },
+    "education": [],
+    "workExperience": [],
+    "skills": [],
+    "customAnswers": {},
+    "consent": {
+      "dataProcessing": true,
+      "accuracyDeclaration": true
+    },
+    "resumePath": "f82962cc-06f2-4819-bc6c-867ca140cea1-1749809314767.pdf",
+    "status": "Pending",
+    "appliedAt": "2025-06-13T10:08:34.783Z"
+  },
+  {
+    "id": "a4fb166023c82ecd66bae06debe7df1c",
+    "jobId": "9675ccc223b085b9b95a34cdc46bf4b3",
+    "userId": "f82962cc-06f2-4819-bc6c-867ca140cea1",
+    "applicantName": "aman10 ",
+    "email": "aman10@gmail.com",
+    "personalInfo": {
+      "firstName": "aman10",
+      "lastName": "",
+      "email": "aman10@gmail.com"
+    },
+    "education": [],
+    "workExperience": [],
+    "skills": [],
+    "customAnswers": {},
+    "consent": {
+      "dataProcessing": true,
+      "accuracyDeclaration": true
+    },
+    "resumePath": "f82962cc-06f2-4819-bc6c-867ca140cea1-1749809969519.pdf",
+    "status": "Pending",
+    "appliedAt": "2025-06-13T10:19:29.534Z"
+  }
+]

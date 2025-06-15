@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "question": "What is the normal body temperature in Celsius?",
+    "options": ["37°C", "39°C", "36°C", "38°C"],
+    "answer": "37°C",
+    "category": "Anatomy"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is NOT a vital sign?",
+    "options": ["Heart Rate", "Respiratory Rate", "Height", "Temperature"],
+    "answer": "Height",
+    "category": "Vitals"
+  },
+  {
+    "id": 3,
+    "question": "Which organ is responsible for pumping blood throughout the body?",
+    "options": ["Lungs", "Liver", "Heart", "Kidneys"],
+    "answer": "Heart",
+    "category": "Anatomy"
+  },
+  {
+    "id": 4,
+    "question": "What is the first step in administering first aid for a minor burn?",
+    "options": ["Apply ice directly", "Cover with a bandage immediately", "Run under cool water", "Apply butter or oil"],
+    "answer": "Run under cool water",
+    "category": "First Aid"
+  },
+  {
+    "id": 5,
+    "question": "How often should medical instruments be sterilized?",
+    "options": ["Daily", "Weekly", "Before every use", "Monthly"],
+    "answer": "Before every use",
+    "category": "Hygiene"
+  },
+  {
+    "id": 6,
+    "question": "What is the normal body temperature for an adult (oral)?",
+    "options": ["95.6°F (35.3°C)", "97.6°F (36.4°C)", "98.6°F (37.0°C)", "99.6°F (37.6°C)"],
+    "answer": "98.6°F (37.0°C)",
+    "category": "Vitals"
+  },
+  {
+    "id": 7,
+    "question": "What does 'PRN' stand for in a prescription?",
+    "options": ["Immediately", "As needed", "Every morning", "Before meals"],
+    "answer": "As needed",
+    "category": "Medical Terms"
+  },
+  {
+    "id": 8,
+    "question": "A patient is anxious about receiving an injection. What is the best communication approach?",
+    "options": ["Tell them to be brave and not worry.", "Distract them with a random topic.", "Acknowledge their fear, explain the process calmly, and offer comfort.", "Proceed quickly to get it over with."],
+    "answer": "Acknowledge their fear, explain the process calmly, and offer comfort.",
+    "category": "Behavioral"
+  },
+  {
+    "id": 9,
+    "question": "Which artery is commonly used to measure pulse in the wrist?",
+    "options": ["Femoral artery", "Carotid artery", "Brachial artery", "Radial artery"],
+    "answer": "Radial artery",
+    "category": "Anatomy"
+  },
+  {
+    "id": 10,
+    "question": "During CPR, what is the correct compression depth for an adult?",
+    "options": ["At least 1 inch (2.5 cm)", "At least 2 inches (5 cm)", "At least 3 inches (7.5 cm)", "Exactly 1.5 inches (3.8 cm)"],
+    "answer": "At least 2 inches (5 cm)",
+    "category": "First Aid"
+  },
+  {
+    "id": 11,
+    "question": "What is 'asepsis' in medical practice?",
+    "options": ["The absence of disease-causing microorganisms", "The process of reducing pain during procedures", "The use of disinfectants on surfaces", "The proper disposal of medical waste"],
+    "answer": "The absence of disease-causing microorganisms",
+    "category": "Hygiene"
+  },
+  {
+    "id": 12,
+    "question": "A patient reports severe, sudden chest pain. What is the immediate priority?",
+    "options": ["Offer them pain medication", "Take their detailed medical history", "Assess for signs of a heart attack and call for emergency help", "Advise them to rest"],
+    "answer": "Assess for signs of a heart attack and call for emergency help",
+    "category": "Emergencies"
+  },
+  {
+    "id": 13,
+    "question": "Which part of the brain is primarily responsible for balance and coordination?",
+    "options": ["Cerebrum", "Cerebellum", "Brainstem", "Thalamus"],
+    "answer": "Cerebellum",
+    "category": "Anatomy"
+  },
+  {
+    "id": 14,
+    "question": "What is the recommended treatment for an anaphylactic shock?",
+    "options": ["Oral antihistamines", "IV fluids", "Epinephrine (adrenaline) injection", "Steroids"],
+    "answer": "Epinephrine (adrenaline) injection",
+    "category": "Emergencies"
+  },
+  {
+    "id": 15,
+    "question": "Which of the following describes 'tachycardia'?",
+    "options": ["Abnormally slow heart rate", "Abnormally fast heart rate", "Irregular heart rhythm", "Low blood pressure"],
+    "answer": "Abnormally fast heart rate",
+    "category": "Medical Terms"
+  }
+]

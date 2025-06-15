@@ -1,0 +1,1011 @@
+/* Import Google Font - Inter for a clean look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- Root Variables for Theming --- */
+:root {
+    /* Light Mode Colors */
+    --background-color-light: #f0f2f5;
+    --card-background-light: #ffffff;
+    --text-color-light: #333333;
+    --heading-color-light: #2c3e50;
+    --primary-color-light: #007bff; /* Blue */
+    --primary-hover-light: #0056b3;
+    --secondary-color-light: #6c757d; /* Gray */
+    --secondary-hover-light: #5a6268;
+    --accent-color-light: #28a745; /* Green */
+    --accent-hover-light: #218838;
+    --danger-color-light: #dc3545; /* Red */
+    --info-color-light: #17a2b8; /* Cyan */
+    --success-color-light: #28a745; /* Green */
+    --warning-color-light: #ffc107; /* Yellow */
+    --border-color-light: #e0e0e0;
+    --shadow-color-light: rgba(0, 0, 0, 0.1);
+
+    /* Dark Mode Colors */
+    --background-color-dark: #2c3e50; /* Dark blue-gray */
+    --card-background-dark: #34495e; /* Slightly darker blue-gray */
+    --text-color-dark: #ecf0f1; /* Off-white */
+    --heading-color-dark: #ecf0f1;
+    --primary-color-dark: #3498db; /* Brighter blue */
+    --primary-hover-dark: #217dbb;
+    --secondary-color-dark: #95a5a6; /* Lighter gray */
+    --secondary-hover-dark: #7f8c8d;
+    --accent-color-dark: #2ecc71; /* Brighter green */
+    --accent-hover-dark: #27ae60;
+    --danger-color-dark: #e74c3c; /* Brighter red */
+    --info-color-dark: #3498db; /* Brighter cyan */
+    --success-color-dark: #2ecc71;
+    --warning-color-dark: #f1c40f;
+    --border-color-dark: #4a627a;
+    --shadow-color-dark: rgba(0, 0, 0, 0.3);
+
+    /* Spacing & Sizes */
+    --padding-sm: 10px;
+    --padding-md: 20px;
+    --padding-lg: 30px;
+    --border-radius: 12px;
+    --transition-speed: 0.3s ease-in-out;
+}
+
+/* --- Base Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-mode-active {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+h1, h2, h3, h4 {
+    color: var(--heading-color-light);
+    margin-bottom: var(--padding-sm);
+}
+
+body.dark-mode-active h1,
+body.dark-mode-active h2,
+body.dark-mode-active h3,
+body.dark-mode-active h4 {
+    color: var(--heading-color-dark);
+}
+
+/* --- General Container & Card Styles --- */
+.assessx-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: var(--padding-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+    align-items: center;
+}
+
+.card {
+    background-color: var(--card-background-light);
+    border-radius: var(--border-radius);
+    padding: var(--padding-lg);
+    box-shadow: 0 8px 24px var(--shadow-color-light);
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.assessx-container.dark-mode .card {
+    background-color: var(--card-background-dark);
+    box-shadow: 0 8px 24px var(--shadow-color-dark);
+}
+
+/* --- Loading & Login States --- */
+.assessx-container.loading,
+.assessx-container.login-required {
+    min-height: 80vh;
+    justify-content: center;
+    text-align: center;
+    gap: var(--padding-md);
+}
+
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--padding-sm);
+    font-size: 1.2em;
+    color: var(--primary-color-light);
+}
+
+.assessx-container.dark-mode .loading-content {
+    color: var(--primary-color-dark);
+}
+
+.loading-content .fa-spinner {
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.login-required .main-title {
+    color: var(--danger-color-light);
+    font-size: 2.5em;
+    margin-bottom: var(--padding-sm);
+}
+
+.assessx-container.dark-mode .login-required .main-title {
+    color: var(--danger-color-dark);
+}
+
+.login-message {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: var(--padding-md);
+}
+
+.go-to-login-button {
+    background-color: var(--primary-color-light);
+    color: white;
+    padding: var(--padding-sm) var(--padding-md);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.1s ease-out;
+}
+
+.go-to-login-button:hover {
+    background-color: var(--primary-hover-light);
+    transform: translateY(-2px);
+}
+
+.assessx-container.dark-mode .go-to-login-button {
+    background-color: var(--primary-color-dark);
+}
+.assessx-container.dark-mode .go-to-login-button:hover {
+    background-color: var(--primary-hover-dark);
+}
+
+
+/* --- Header --- */
+.assessx-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: var(--padding-md);
+    padding: var(--padding-sm) 0;
+}
+
+.assessx-header .main-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: var(--padding-sm);
+    margin: 0;
+    color: var(--primary-color-light);
+}
+
+.assessx-container.dark-mode .assessx-header .main-title {
+    color: var(--primary-color-dark);
+}
+
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--border-color-light);
+    border-radius: var(--border-radius);
+    padding: var(--padding-sm) var(--padding-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    color: var(--text-color-light);
+    transition: all var(--transition-speed);
+}
+
+.theme-toggle:hover {
+    background-color: var(--border-color-light);
+}
+
+.assessx-container.dark-mode .theme-toggle {
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+
+.assessx-container.dark-mode .theme-toggle:hover {
+    background-color: var(--border-color-dark);
+}
+
+/* --- Info Section (How it Works) --- */
+.assessx-info-section {
+    width: 100%;
+    text-align: center;
+    padding: var(--padding-lg);
+    background-color: var(--card-background-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px var(--shadow-color-light);
+}
+
+.assessx-container.dark-mode .assessx-info-section {
+    background-color: var(--card-background-dark);
+    box-shadow: 0 8px 24px var(--shadow-color-dark);
+}
+
+.section-heading {
+    font-size: 2em;
+    margin-bottom: var(--padding-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--padding-sm);
+    color: var(--heading-color-light);
+}
+.assessx-container.dark-mode .section-heading {
+    color: var(--heading-color-dark);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--padding-md);
+    margin-bottom: var(--padding-lg);
+}
+
+.info-item {
+    padding: var(--padding-md);
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--card-background-light); /* Explicitly set for cards */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Lighter shadow for inner cards */
+    transition: transform 0.2s ease-out, background-color var(--transition-speed);
+}
+
+.assessx-container.dark-mode .info-item {
+    border-color: var(--border-color-dark);
+    background-color: var(--card-background-dark);
+    box-shadow: 0 4px 12px var(--shadow-color-dark);
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 2.5em;
+    color: var(--primary-color-light);
+    margin-bottom: var(--padding-sm);
+}
+.assessx-container.dark-mode .info-icon {
+    color: var(--primary-color-dark);
+}
+
+.info-item h4 {
+    font-size: 1.3em;
+    margin-bottom: var(--padding-sm);
+    color: var(--heading-color-light);
+}
+.assessx-container.dark-mode .info-item h4 {
+    color: var(--heading-color-dark);
+}
+
+.info-item p {
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.text-link {
+    background: none;
+    border: none;
+    color: var(--primary-color-light);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: inherit;
+    padding: 0;
+    transition: color var(--transition-speed);
+}
+.text-link:hover {
+    color: var(--primary-hover-light);
+}
+.assessx-container.dark-mode .text-link {
+    color: var(--primary-color-dark);
+}
+.assessx-container.dark-mode .text-link:hover {
+    color: var(--primary-hover-dark);
+}
+
+/* --- Test Start Area --- */
+.test-start-area {
+    text-align: center;
+    padding: var(--padding-lg);
+    border: 1px solid var(--border-color-light);
+    background-color: var(--card-background-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.assessx-container.dark-mode .test-start-area {
+    border-color: var(--border-color-dark);
+    background-color: var(--card-background-dark);
+    box-shadow: 0 4px 12px var(--shadow-color-dark);
+}
+
+
+.score-and-attempts {
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-lg);
+    margin-bottom: var(--padding-md);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.attempts-left .highlight,
+.latest-score-display .highlight {
+    font-weight: 700;
+    color: var(--primary-color-light);
+    font-size: 1.2em;
+}
+.assessx-container.dark-mode .attempts-left .highlight,
+.assessx-container.dark-mode .latest-score-display .highlight {
+    color: var(--primary-color-dark);
+}
+
+.start-button {
+    font-size: 1.3em;
+    padding: 15px 30px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 600;
+    background-image: linear-gradient(45deg, var(--primary-color-light), var(--primary-hover-light));
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.start-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+.start-button:disabled {
+    background-image: linear-gradient(45deg, var(--secondary-color-light), var(--secondary-hover-light));
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+}
+.assessx-container.dark-mode .start-button {
+    background-image: linear-gradient(45deg, var(--primary-color-dark), var(--primary-hover-dark));
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+.assessx-container.dark-mode .start-button:hover:not(:disabled) {
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}
+.assessx-container.dark-mode .start-button:disabled {
+    background-image: linear-gradient(45deg, var(--secondary-color-dark), var(--secondary-hover-dark));
+}
+
+.purchase-hint {
+    margin-top: var(--padding-sm);
+    font-size: 0.9em;
+    color: var(--secondary-color-light);
+}
+.assessx-container.dark-mode .purchase-hint {
+    color: var(--secondary-color-dark);
+}
+
+/* --- Question Section --- */
+.question-section {
+    padding: var(--padding-lg);
+    text-align: center;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: var(--border-color-light);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: var(--padding-md);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+.assessx-container.dark-mode .progress-bar-container {
+    background-color: var(--border-color-dark);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--primary-color-light);
+    width: 0%; /* Controlled by JS */
+    border-radius: 5px;
+    transition: width 0.4s ease-out;
+}
+.assessx-container.dark-mode .progress-bar-fill {
+    background-color: var(--primary-color-dark);
+}
+
+.question-header {
+    margin-bottom: var(--padding-md);
+}
+
+.question-number {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--info-color-light);
+    margin-bottom: var(--padding-sm);
+    display: block;
+}
+.assessx-container.dark-mode .question-number {
+    color: var(--info-color-dark);
+}
+
+.question-text {
+    font-size: 1.8em;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: var(--padding-md);
+    color: var(--heading-color-light);
+}
+.assessx-container.dark-mode .question-text {
+    color: var(--heading-color-dark);
+}
+
+.time-left {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--danger-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: var(--padding-md);
+    animation: pulse 1.5s infinite alternate;
+}
+.assessx-container.dark-mode .time-left {
+    color: var(--danger-color-dark);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: var(--padding-sm);
+    margin-bottom: var(--padding-md);
+}
+
+.option-button {
+    background-color: var(--card-background-light);
+    border: 2px solid var(--border-color-light);
+    border-radius: var(--border-radius);
+    padding: var(--padding-sm) var(--padding-md);
+    font-size: 1.1em;
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    color: var(--text-color-light);
+}
+.assessx-container.dark-mode .option-button {
+    background-color: var(--card-background-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+    box-shadow: 0 2px 6px var(--shadow-color-dark);
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: var(--primary-color-light);
+    color: white;
+    border-color: var(--primary-color-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+.assessx-container.dark-mode .option-button:hover:not(:disabled) {
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-dark);
+    border-color: var(--primary-color-dark);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.2);
+}
+
+.option-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Correct/Incorrect feedback for options */
+.option-button.correct-selected {
+    background-color: var(--success-color-light);
+    color: white;
+    border-color: var(--success-color-light);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+    transform: scale(1.02);
+}
+.assessx-container.dark-mode .option-button.correct-selected {
+    background-color: var(--success-color-dark);
+    border-color: var(--success-color-dark);
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.4);
+}
+
+.option-button.incorrect-selected {
+    background-color: var(--danger-color-light);
+    color: white;
+    border-color: var(--danger-color-light);
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+    transform: scale(1.02);
+}
+.assessx-container.dark-mode .option-button.incorrect-selected {
+    background-color: var(--danger-color-dark);
+    border-color: var(--danger-color-dark);
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
+}
+
+.option-button.correct-not-selected {
+    border-color: var(--success-color-light);
+    box-shadow: inset 0 0 0 2px var(--success-color-light); /* Highlight correct answer if not selected */
+    background-color: var(--card-background-light);
+    color: var(--success-color-light);
+    opacity: 0.9;
+}
+.assessx-container.dark-mode .option-button.correct-not-selected {
+    border-color: var(--success-color-dark);
+    box-shadow: inset 0 0 0 2px var(--success-color-dark);
+    background-color: var(--card-background-dark);
+    color: var(--success-color-dark);
+}
+
+.explanation-section {
+    background-color: rgba(0, 123, 255, 0.08); /* Light blue background */
+    border: 1px solid var(--primary-color-light);
+    border-radius: var(--border-radius);
+    padding: var(--padding-sm);
+    margin-top: var(--padding-md);
+    font-size: 0.95em;
+    text-align: left;
+    color: var(--text-color-light);
+}
+.assessx-container.dark-mode .explanation-section {
+    background-color: rgba(52, 152, 219, 0.15); /* Darker blue background */
+    border-color: var(--primary-color-dark);
+    color: var(--text-color-dark);
+}
+
+.explanation-text .correct-answer-text {
+    font-weight: 600;
+    color: var(--success-color-light);
+}
+.assessx-container.dark-mode .explanation-text .correct-answer-text {
+    color: var(--success-color-dark);
+}
+
+.category-label {
+    margin-top: var(--padding-md);
+    font-size: 0.9em;
+    color: var(--secondary-color-light);
+}
+.assessx-container.dark-mode .category-label {
+    color: var(--secondary-color-dark);
+}
+.category-name {
+    font-weight: 600;
+}
+
+/* --- Result Section --- */
+.result-section {
+    text-align: center;
+    padding: var(--padding-lg);
+}
+
+.score-heading {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: var(--padding-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: var(--heading-color-light);
+}
+.assessx-container.dark-mode .score-heading {
+    color: var(--heading-color-dark);
+}
+
+.score-value {
+    color: var(--primary-color-light); /* Accent color for the score */
+    font-size: 1.2em;
+}
+.assessx-container.dark-mode .score-value {
+    color: var(--primary-color-dark);
+}
+
+.result-message {
+    font-size: 1.2em;
+    margin-bottom: var(--padding-lg);
+    font-weight: 500;
+    color: var(--text-color-light);
+}
+
+.result-message.success {
+    color: var(--success-color-light);
+}
+.assessx-container.dark-mode .result-message.success {
+    color: var(--success-color-dark);
+}
+
+.result-message.fail {
+    color: var(--danger-color-light);
+}
+.assessx-container.dark-mode .result-message.fail {
+    color: var(--danger-color-dark);
+}
+
+.breakdown-heading {
+    font-size: 1.6em;
+    margin-bottom: var(--padding-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--heading-color-light);
+}
+.assessx-container.dark-mode .breakdown-heading {
+    color: var(--heading-color-dark);
+}
+
+.category-scores-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto var(--padding-lg) auto;
+    max-width: 400px;
+}
+
+.category-scores-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border-color-light);
+    font-size: 1.1em;
+    color: var(--text-color-light);
+}
+.assessx-container.dark-mode .category-scores-list li {
+    border-bottom-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+
+.category-scores-list li:last-child {
+    border-bottom: none;
+}
+
+.score-correct {
+    color: var(--success-color-light);
+    font-weight: 600;
+}
+.assessx-container.dark-mode .score-correct {
+    color: var(--success-color-dark);
+}
+
+.score-incorrect {
+    color: var(--danger-color-light);
+    font-weight: 600;
+}
+.assessx-container.dark-mode .score-incorrect {
+    color: var(--danger-color-dark);
+}
+
+
+.result-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--padding-sm);
+    margin-top: var(--padding-lg);
+}
+
+.action-button {
+    font-size: 1.1em;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.action-button.btn-primary {
+    background-color: var(--primary-color-light);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+.action-button.btn-primary:hover {
+    background-color: var(--primary-hover-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+.assessx-container.dark-mode .action-button.btn-primary {
+    background-color: var(--primary-color-dark);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+.assessx-container.dark-mode .action-button.btn-primary:hover {
+    background-color: var(--primary-hover-dark);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.3);
+}
+
+
+.action-button.btn-secondary {
+    background-color: var(--secondary-color-light);
+    color: white;
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+}
+.action-button.btn-secondary:hover {
+    background-color: var(--secondary-hover-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(108, 117, 125, 0.3);
+}
+.assessx-container.dark-mode .action-button.btn-secondary {
+    background-color: var(--secondary-color-dark);
+    box-shadow: 0 4px 12px rgba(149, 165, 166, 0.2);
+}
+.assessx-container.dark-mode .action-button.btn-secondary:hover {
+    background-color: var(--secondary-hover-dark);
+    box-shadow: 0 6px 16px rgba(149, 165, 166, 0.3);
+}
+
+.action-button.btn-accent {
+    background-color: var(--accent-color-light);
+    color: white;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+.action-button.btn-accent:hover {
+    background-color: var(--accent-hover-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.3);
+}
+.assessx-container.dark-mode .action-button.btn-accent {
+    background-color: var(--accent-color-dark);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
+}
+.assessx-container.dark-mode .action-button.btn-accent:hover {
+    background-color: var(--accent-hover-dark);
+    box-shadow: 0 6px 16px rgba(46, 204, 113, 0.3);
+}
+
+.action-button.btn-text {
+    background: none;
+    color: var(--text-color-light);
+    border: 2px solid var(--border-color-light);
+}
+.action-button.btn-text:hover {
+    background-color: var(--border-color-light);
+    transform: translateY(-2px);
+}
+.assessx-container.dark-mode .action-button.btn-text {
+    color: var(--text-color-dark);
+    border-color: var(--border-color-dark);
+}
+.assessx-container.dark-mode .action-button.btn-text:hover {
+    background-color: var(--border-color-dark);
+}
+
+
+/* --- Payment Modal --- */
+.payment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.payment-modal-content {
+    background-color: var(--card-background-light);
+    padding: var(--padding-lg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px var(--shadow-color-light);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 0.3s ease-out;
+    color: var(--text-color-light);
+}
+.assessx-container.dark-mode .payment-modal-content {
+    background-color: var(--card-background-dark);
+    box-shadow: 0 10px 30px var(--shadow-color-dark);
+    color: var(--text-color-dark);
+}
+
+
+.payment-modal-content h3 {
+    font-size: 1.8em;
+    margin-bottom: var(--padding-sm);
+    color: var(--heading-color-light);
+}
+.assessx-container.dark-mode .payment-modal-content h3 {
+    color: var(--heading-color-dark);
+}
+
+.payment-modal-content p {
+    font-size: 1.1em;
+    margin-bottom: var(--padding-md);
+}
+
+.payment-modal-content .price {
+    font-weight: 700;
+    color: var(--accent-color-light);
+    font-size: 1.2em;
+}
+.assessx-container.dark-mode .payment-modal-content .price {
+    color: var(--accent-color-dark);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-sm);
+    margin-top: var(--padding-md);
+}
+
+/* Reusing general button styles, but specific classes for clarity */
+.modal-actions .btn-primary {
+    background-color: var(--primary-color-light);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.1s ease-out;
+}
+.modal-actions .btn-primary:hover {
+    background-color: var(--primary-hover-light);
+    transform: translateY(-2px);
+}
+.assessx-container.dark-mode .modal-actions .btn-primary {
+    background-color: var(--primary-color-dark);
+}
+.assessx-container.dark-mode .modal-actions .btn-primary:hover {
+    background-color: var(--primary-hover-dark);
+}
+
+.modal-actions .btn-secondary {
+    background-color: var(--secondary-color-light);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.1s ease-out;
+}
+.modal-actions .btn-secondary:hover {
+    background-color: var(--secondary-hover-light);
+    transform: translateY(-2px);
+}
+.assessx-container.dark-mode .modal-actions .btn-secondary {
+    background-color: var(--secondary-color-dark);
+}
+.assessx-container.dark-mode .modal-actions .btn-secondary:hover {
+    background-color: var(--secondary-hover-dark);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Toastify Customization (Optional but Recommended) --- */
+.Toastify__toast-container--top-right {
+    top: 1em;
+    right: 1em;
+}
+
+.Toastify__toast {
+    border-radius: var(--border-radius);
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Toastify__toast--success {
+    background-color: var(--success-color-light);
+    color: white;
+}
+.assessx-container.dark-mode .Toastify__toast--success {
+    background-color: var(--success-color-dark);
+}
+
+.Toastify__toast--error {
+    background-color: var(--danger-color-light);
+    color: white;
+}
+.assessx-container.dark-mode .Toastify__toast--error {
+    background-color: var(--danger-color-dark);
+}
+
+.Toastify__toast--warning {
+    background-color: var(--warning-color-light);
+    color: var(--text-color-light); /* Keep text dark for contrast */
+}
+.assessx-container.dark-mode .Toastify__toast--warning {
+    background-color: var(--warning-color-dark);
+    color: var(--text-color-dark);
+}
+
+.Toastify__toast--info {
+    background-color: var(--info-color-light);
+    color: white;
+}
+.assessx-container.dark-mode .Toastify__toast--info {
+    background-color: var(--info-color-dark);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 600px) {
+    .options-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on wider screens */
+        gap: var(--padding-md);
+    }
+}
+
+@media (min-width: 768px) {
+    .assessx-container {
+        padding: var(--padding-lg);
+    }
+    .info-grid {
+        grid-template-columns: repeat(4, 1fr); /* Four columns on larger screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .assessx-header {
+        flex-direction: column;
+        gap: var(--padding-sm);
+    }
+    .assessx-header .main-title {
+        font-size: 2em;
+    }
+    .theme-toggle .toggle-text {
+        display: none; /* Hide text on small screens for theme toggle */
+    }
+    .score-and-attempts {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .start-button {
+        width: 100%;
+    }
+    .question-text {
+        font-size: 1.5em;
+    }
+    .action-button {
+        width: 100%;
+        margin-bottom: 8px; /* Add margin between stacked buttons */
+    }
+}
+
+/* General button styles for consistency (if not already defined globally) */
+button {
+    font-family: 'Inter', sans-serif;
+}
